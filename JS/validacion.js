@@ -1,19 +1,20 @@
 function valida_envia() {
-    //valido el nombre
-    if (validaLetras(document.fcontacto.tcontacto.nombre.value == false)) {
+    //valido el nombres
+
+    if (!validaLetras(document.fcontacto.nombre.value)) {
         alert("Tiene que escribir su nombre");
-        document.fcontacto.tcontacto.nombre.focus();
-        return 0;
+        document.fcontacto.nombre.focus();
+        return false;
     }
 
-    if (validarEmail(document.fcontacto.tcontacto.email.value) == false) {
+    if (validarEmail(document.fcontacto.email.value) == false) {
         alert("Formato de Mail Incorrecta");
-        document.fcontacto.tcontacto.telefono.focus();
-        return 0;
+        document.fcontacto.email.focus();
+        return false;
     }
 
     //el formulario se envia
-    alert("Muchas gracias por enviar el formulario");
+    alert("Muchas gracias por contactarnos");
     document.fcontacto.submit();
 }
 
@@ -44,7 +45,7 @@ function validarEntero(valor) {
 
 function validaLetras(valor) {
     var letters = /^[A-Za-z]+$/;
-    if (valor.value.match(letters)) {
+    if (valor.match(letters)) {
         return true;
     } else {
         return false;

@@ -73,7 +73,7 @@
         <main>
             <article>
                 <h3>Contacto</h3>
-                <form name="fcontacto" action="Home.html">
+                <form name="fcontacto" onsubmit="return valida_envia()">
                     <ul class="form" name="tcontacto">
                         <li>
                             <label>Nombre:</label>
@@ -133,7 +133,6 @@
                                 <button
                                     class="btn rounded"
                                     type="submit"
-                                    onclick="valida_envia2()"
                                 >
                                     <span class="text">Enviar</span>
                                 </button>
