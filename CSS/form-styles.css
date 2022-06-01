@@ -1,0 +1,101 @@
+form {
+    background-color: azure;
+    padding: 15px;
+}
+@media (min-width: 600px) {
+    form {
+        width: 400px;
+    }
+}
+h3 {
+    padding: 8px;
+}
+.form {
+    list-style-type: none;
+    padding: 0;
+}
+
+.form {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form > li:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.form li label,
+.form li p {
+    padding: 6px;
+    font-weight: 300;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.form > li > label,
+.form li p {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.form > li > label + * {
+    flex: 1 0 220px;
+}
+
+.form li p {
+    margin: 0;
+}
+
+.form li input:not([type="checkbox"]),
+.form li textarea {
+    padding: 8px;
+    border: none;
+}
+
+.btn {
+    margin: 10px auto;
+    border: none;
+    padding: 5px 30px;
+    font-size: 15px;
+    position: relative;
+    background: #7300a6;
+    min-width: 120px;
+}
+.btn::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: #7300a6;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn:hover::before {
+    background: #7300a6;
+    width: 100%;
+}
+.btn.rounded {
+    border-radius: 50px;
+}
+.btn.rounded .text {
+    color: azure;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+.btn.rounded::before {
+    border-radius: 50px;
+    width: 25%;
+    background: #910791;
+}
+.btn.rounded:hover::before {
+    background: #910791;
+    width: 100%;
+}

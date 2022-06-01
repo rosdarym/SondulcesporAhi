@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto</title>
+        <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/form-styles.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/menu.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script
+            src="https://kit.fontawesome.com/d52dd34634.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abel"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header>
+            <div class="head-spacer"></div>
+            <div class="container">
+                <div class="logo">
+                    <img
+                        src="Imagenes/header.jpg"
+                        width="92"
+                        height="88"
+                        alt="logo"
+                    />
+                </div>
+                <div>
+                    <h1>Son Dulces por Ahi</h1>
+                    <h2>Decoramos toda ocacion para vos</h2>
+                </div>
+            </div>
+        </header>
+        <div class="Navbar">
+            <div class="Navbar__Link Navbar__Link-brand">&nbsp</div>
+            <div class="Navbar__Link Navbar__Link-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="Navbar__Items">
+                <div class="Navbar__Link"><a href="Home.html">Home</a></div>
+                <div class="Navbar__Link">
+                    <a href="productos.html">Productos</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="quienessomos.html">Quienes Somos</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <article>
+                <h3>Contacto</h3>
+                <form name="fcontacto" action="Home.html">
+                    <ul class="form" name="tcontacto">
+                        <li>
+                            <label>Nombre:</label>
+                            <input
+                                type="text"
+                                name="nombre"
+                                id="nombre"
+                                placeholder="Escriba aqui su nombre"
+                                autofocus
+                                required
+                            />
+                        </li>
+                        <li>
+                            <label>Apellido:</label>
+                            <input
+                                type="text"
+                                name="apellido"
+                                id="apellido"
+                                placeholder="Escriba aqui su Apellido"
+                            />
+                        </li>
+                        <li>
+                            <label>Telefono:</label>
+                            <input
+                                type="tel"
+                                name="telefono"
+                                id="telefono"
+                                placeholder="123-4567-1234"
+                                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                                required
+                            />
+                        </li>
+                        <li>
+                            <label>Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Escriba aqui su email"
+                                required
+                            />
+                        </li>
+                        <li>
+                            <label>Consulta:</label>
+                            <textarea
+                                rows="4"
+                                type="text"
+                                name="Consulta"
+                                id="consulta"
+                                size="100"
+                                placeholder="Escriba su consulta"
+                                required
+                            ></textarea>
+                        </li>
+                        <li>
+                            <div class="container">
+                                <button
+                                    class="btn rounded"
+                                    type="submit"
+                                    onclick="valida_envia2()"
+                                >
+                                    <span class="text">Enviar</span>
+                                </button>
+
+                                <button class="btn rounded" type="reset">
+                                    <span class="text">Cancelar</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </main>
+        <footer>
+            <address>
+                &copy; 2022-Todos los derechos reservados - Rosdarym@gmail.com -
+                tel: 011-5555-9745
+            </address>
+        </footer>
+    </body>
+    <script src="JS/validacion.js"></script>
+    <script src="JS/menu.js"></script>
+</html>
